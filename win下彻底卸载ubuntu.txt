@@ -1,0 +1,18 @@
+1、清除ubuntu系统
+我的电脑>>>右键“管理”>>>磁盘管理>>>找到ubuntu系统使用的几个分区>>>“删除卷”(包括EFI分区)
+
+2、删除开启引导启动项
+进入cmd
+输入：
+diskpart
+list disk
+选择Windows安装磁盘：
+select disk 1(根据自己的磁盘情况)
+lisk partition
+确定Windows EFI分区（类型为系统的分区）
+select partition 1
+assign letter=J（这里的字母命名不能与已有盘重复）
+删除ubuntu:J盘>>>EFI>>>ubuntu>>>右键删除
+删除新增盘
+remove letter=J
+卸载完成！！！！

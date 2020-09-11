@@ -1,0 +1,4 @@
+exfat格式U盘无法加载问题：
+$ sudo apt-get install exfat-fuse
+
+
